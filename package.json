@@ -1,0 +1,26 @@
+{
+  "name": "open-master-format",
+  "version": "1.0.0",
+  "description": "Permet la gestion des masters de production audiovisuel",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tsc && node build/cmd/app.js",
+    "build": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tidle-Groupe/Open-Master-Format.git"
+  },
+  "author": "Théo Laubezout",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Tidle-Groupe/Open-Master-Format/issues"
+  },
+  "homepage": "https://github.com/Tidle-Groupe/Open-Master-Format#readme",
+  "devDependencies": {
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {
+    "fs-extra": "^9.0.1"
+  }
+}
