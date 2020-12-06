@@ -2,7 +2,10 @@
   "name": "open-master-format",
   "version": "1.0.0",
   "description": "Permet la gestion des masters de production audiovisuel",
-  "main": "index.js",
+  "main": "build/cmd/app.js",
+  "bin": {
+    "omf": "bin/omf"
+  },
   "scripts": {
     "start": "npx tsc && node build/cmd/app.js",
     "build": "npx tsc"
@@ -18,6 +21,7 @@
   },
   "homepage": "https://github.com/Tidle-Groupe/Open-Master-Format#readme",
   "devDependencies": {
+    "@types/fs-extra": "^9.0.4",
     "typescript": "^4.1.2"
   },
   "dependencies": {
