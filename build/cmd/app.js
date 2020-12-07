@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var fs_extra_1 = __importDefault(require("fs-extra"));
+var build_1 = __importDefault(require("./build"));
 var Args = process.argv.slice(2);
 function verif_omf() {
     if (fs_extra_1.default.pathExistsSync('omf.json')) {
@@ -16,7 +17,7 @@ function verif_omf() {
 if (verif_omf()) {
     switch (Args[0]) {
         case 'build':
-            require('../build/cmd/build.js');
+            build_1.default();
             break;
         default:
             require('../build/cmd/help.js');

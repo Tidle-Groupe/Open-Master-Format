@@ -1,4 +1,5 @@
 import fs from "fs-extra";
+import build from "./build";
 
 //Récupération des arguments
 var Args = process.argv.slice(2);
@@ -21,7 +22,7 @@ if(verif_omf()){
     switch (Args[0]) {
         //Création du build (suivis par le nom de build à effectuer)
         case 'build':
-            require('../build/cmd/build.js');
+            build();
             break;
         //Affichage des commandes disponibles
         default:
