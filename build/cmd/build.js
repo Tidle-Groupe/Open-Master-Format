@@ -10,6 +10,7 @@ function init() {
     var build = recup_build(omf_json);
     if (valide_build(build, Args[1])) {
         var files_build = recup_files_build(omf_json, build);
+        console.log(recup_info_files(files_build));
     }
 }
 function recup_build(json) {
@@ -37,5 +38,11 @@ function recup_files_build(json, build) {
     return files;
 }
 function recup_info_files(files) {
+    var files_json = JSON.parse(fs_extra_1.default.readFileSync("./files-conf.json", 'utf8'));
+    var infos = [];
+    for (var i = 0; i < files.length; i++) {
+        infos.push(files_json.files[i]);
+    }
+    return infos;
 }
 exports.default = init;

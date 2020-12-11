@@ -18,7 +18,7 @@ function init(){
         //Build du contenu
 
         //Récupération des informations sur les fichiers
-        
+        console.log(recup_info_files(files_build));
     }
 }
 
@@ -51,7 +51,13 @@ function recup_files_build(json: any, build: string[]){
 }
 
 function recup_info_files(files: string[]){
+    var files_json: any = JSON.parse(fs.readFileSync("./files-conf.json", 'utf8'));
 
+    var infos: string[] = [];
+    for(var i= 0; i < files.length; i++){
+        infos.push(files_json.files[i]);
+    }
+    return infos;
 }
 
 export default init;
